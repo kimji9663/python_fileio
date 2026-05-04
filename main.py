@@ -12,9 +12,14 @@ def menu():
     1. 파일 새로 쓰고 저장하기 테스트
     2. 경로 지정하고 파일 저장하기 테스트
     3. 기존 내용 뒤에 추가 쓰기 테스트
-    4. 사용중인 컴퓨터의 사용자 계정과 현재 디렉토리
+    4. 파일로부터 읽어오기
     5. while 반복문 사용 테스트 1
     6. while 반복문 사용 테스트 2
+    7. os모듈의 함수 확인
+    10. 한줄씩 읽고 리스트에 정리
+    11. collection item들을 파일에 저장하기
+    12. 이진 데이터로 파일에 저장하기
+    13. 이진 데이터 파일 열기
     9. 메뉴 종료
     '''
 
@@ -32,11 +37,21 @@ def menu():
         if no == 3:
             fs.test_fwrite3()
         if no == 4:
-            fs.test_osmodule()
+            fs.test_fread()
         if no == 5:
             lw.test_while()
         if no == 6:
             lw.print_unicode()
+        if no == 7:
+            fs.test_osmodule()
+        if no == 10:
+            fs.test_fread2()
+        if no == 11:
+            fs.test_writelines()
+        if no == 12:
+            fs2.test_binary_fileio()
+        if no == 13:
+            fs2.test_binary_fileio2()
         if no == 9:
             break
     # while문 끝나는 지점
@@ -46,6 +61,7 @@ def menu():
 
 import fileio_sample.fileio_module as fs
 import loop.while_sampe as lw
+import fileio_sample.fileio_module2 as fs2
 
 if __name__ == '__main__':
     # fs.test_fwrite()
